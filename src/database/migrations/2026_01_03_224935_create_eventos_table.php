@@ -1,11 +1,12 @@
 <?php
 
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -15,18 +16,18 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('descripcion');
-            $table->date('fechainicio');
-            $table->date('fechafin');
+            $table->date('fecha_inicio');
+            $table->date('fecha_fin');
             $table->string('ubicacion');
             $table->timestamps();
         });
     }
 
+
     /**
      * Reverse the migrations.
      */
-    public function down(): void
-    {
+    public function down(): void {
         Schema::dropIfExists('eventos');
     }
 };
